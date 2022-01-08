@@ -4,7 +4,7 @@ import { addTodo } from "../app/todoSlice";
 const AddTodoForm = () => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
-  const onSubmit = event => {
+  const HandeSubmit = (event) => {
     event.preventDefault();
     dispatch(
       addTodo({
@@ -14,7 +14,7 @@ const AddTodoForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="form-inline mt-3 mb-3">
+    <form onSubmit={HandeSubmit} className="form-inline mt-3 mb-3">
       <label className="sr-only">Name</label>
       <input
         type="text"
